@@ -50,7 +50,7 @@
     color: #ffe600; 
   }
 .top-button1{
-    /* background: url("/public/icons8-treasure-64.png"); */
+   background: url("/public/treasure.png");
     background-size: cover;
     background-position:center ;
     width: 50px;
@@ -59,7 +59,7 @@
     cursor: pointer;
 }
 .top-button2{
-    /* background: url("/public/icons8-podium-64.png"); */
+    background: url("/public/leaderboard.jpg");
     background-size: cover;
     background-position:center ;
     width: 50px;
