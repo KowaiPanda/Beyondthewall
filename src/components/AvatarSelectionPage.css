@@ -1,0 +1,67 @@
+/* AvatarSelectionPage.css */
+.avatar-selection-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  color: white;
+  padding: 30px;
+}
+
+
+.avatar-selection-page h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.avatar-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.avatar-card {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.avatar-card p{
+  font-size: 10px;
+  font-family: 'Cinzel',serif;
+}
+
+.avatar-card:hover {
+  transform: scale(1.05);
+}
+
+.avatar-card img {
+  width: 120px;
+  height: 270px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.avatar-card p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.back-button {
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #555;
+}

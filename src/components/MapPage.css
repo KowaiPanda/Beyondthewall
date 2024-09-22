@@ -1,0 +1,30 @@
+/* MapPage.css */
+.map-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .map-page h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .map-container {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  .got-map {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  

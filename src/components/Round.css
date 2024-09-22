@@ -1,0 +1,157 @@
+.round-1-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-image: url('/public/round1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.carried-timer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+}
+
+.round1-timer {
+  font-size: 32px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.visible-input {
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.invisible-input {
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  width: 50%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.warning-message {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .round-1-page {
+    padding: 20px;
+  }
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* 4 equal columns */
+  grid-template-rows: repeat(2, 100px);    /* 2 equal rows */
+  gap: 2px; /* Add space between the images */
+  width: 420px; /* Adjust width based on image size and gap */
+  height: 220px; /* Adjust height based on image size and gap */
+  margin-top: 20px;
+  margin-right: 90px;
+}
+
+.image-part {
+  background-size: 400px 200px; /* Match this with the full image's size */
+  width: 100px; /* Each image part takes up 100px by 100px */
+  height: 100px;
+  display: none; /* Initially hide each part */
+}
+
+/* Part 1 (Top Left) */
+.part-1 {
+  background-image: url('/public/emblem.jpg');
+  background-position: 0 0; /* Top-left corner */
+}
+
+/* Part 2 (Top Center left) */
+.part-2 {
+  background-image: url('/public/emblem.jpg');
+  background-position: -100px 0; /* 100px shift to the left */
+}
+
+/* Part 3 (Top Center Right) */
+.part-3 {
+  background-image: url('/public/emblem.jpg');
+  background-position: -200px 0;
+}
+
+/* Part 4 (Top Right corner) */
+.part-4 {
+  background-image: url('/public/emblem.jpg');
+  background-position: -300px 0;
+}
+
+/* Part 5 (Bottom Left corner) */
+.part-5 {
+  background-image: url('/public/emblem.jpg');
+  background-position: 0 -100px; /* Shift vertically for the second row */
+}
+
+/* Part 6 (Bottom Center left) */
+.part-6 {
+  background-image: url('/public/emblem.jpg');
+  background-position: -100px -100px;
+}
+
+/* Part 7 (Bottom Center Right) */
+.part-7 {
+  background-image: url('/public/emblem.jpg');
+  background-position: -200px -100px;
+}
+
+/* Part 8 (Bottom Right corner) */
+.part-8 {
+  background-image: url('/public/emblem.jpg');
+  background-position: -300px -100px;
+}
+
+.visible {
+  display: block; /* Show the part when it's visible */
+}
+
+.download-button {
+  padding: 10px 20px;
+  margin-top: 150px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .submit-button, .download-button {
+    width: 100%;
+  }
+}
