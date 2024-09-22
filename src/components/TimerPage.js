@@ -30,8 +30,8 @@ function CountdownTimer() {
     <div className="timer-page">
       <div className="top-buttons">
         <button onClick={() => navigate('/map')} className="top-button1"></button>
-        <button onClick={() => navigate('/map')} className="top-button2"></button>
-      </div>
+        <button onClick={() => navigate('/leaderboard')} className="top-button2"></button>
+        </div>
       <h1 className="Font">YOUR WATCH HAS NOW BEGUN</h1>
       <div className="content">
         <p className="Font">{formatTime(time)}</p>
