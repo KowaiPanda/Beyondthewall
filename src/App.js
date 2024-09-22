@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import LoginPage from './components/LoginPage';
+import AvatarSelectionPage from './components/AvatarSelectionPage';
+import MapPage from './components/MapPage';
+import TimerPage from './components/TimerPage';
+import Round from './components/Round';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/select-avatar" element={<AvatarSelectionPage />} />
+        {/* /*<Route path="/map" element={<MapPage />} /> */}
+        <Route path="/timer" element={<TimerPage/>}/>
+        <Route path="/Round" element={<Round/>}/>
+      </Routes>
+    </Router>
   );
 }
 
