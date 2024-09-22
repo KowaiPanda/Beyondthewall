@@ -15,11 +15,8 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/select-avatar" element={<AvatarSelectionPage />} />
-<<<<<<< HEAD
         <Route path="/map" element={<MapPage />} />
-=======
         <Route path="/map" element={<MapPage />} /> 
->>>>>>> 9cb80a79d5ea39d23d35a9780b32b94b99890f5f
         <Route path="/timer" element={<TimerPage/>}/>
         <Route path="/Round" element={<Round/>}/>
         <Route path="/leaderboard" element={<LeaderboardPage/>}/>
