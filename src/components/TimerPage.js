@@ -35,7 +35,7 @@ function CountdownTimer() {
       <h1 className="Font">YOUR WATCH HAS NOW BEGUN</h1>
       <div className="content">
         <p className="Font">{formatTime(time)}</p>
-        <button onClick={()=> navigate('/Round')} className="game">Start</button>
+        <button onClick={()=> navigate('/Round', { state: { carriedTime: time } })}  className="game">Start</button>
       </div>
     </div>
   );

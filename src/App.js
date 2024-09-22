@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/select-avatar" element={<AvatarSelectionPage />} />
-        {/* /*<Route path="/map" element={<MapPage />} /> */}
+        <Route path="/map" element={<MapPage />} /> 
         <Route path="/timer" element={<TimerPage/>}/>
         <Route path="/Round" element={<Round/>}/>
       </Routes>
