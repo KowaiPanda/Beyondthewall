@@ -7,7 +7,7 @@ const MapPage = () => {
     <div className="map-page">
       <h2>Game of Thrones Map</h2>
       <div className="map-container">
-        <img src="got-map.jpg" alt="Game of Thrones Map" className="got-map" />
+        <img src="/map.jpg" alt="Game of Thrones Map" className="got-map" />
       </div>
     </div>
   );
