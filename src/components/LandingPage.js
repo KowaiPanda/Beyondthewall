@@ -9,6 +9,10 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       <div className="background-image">
+        <h2 className='quest'>Quest</h2>
+        <h1 className='beyond'>Beyond</h1>
+        <h5 className='the'>The</h5>
+        <h2 className='wall'>Wall</h2>
         <div className="description">
           <p>
             Embark on a thrilling adventure, navigating a series of enigmatic puzzles and physical challenges. 

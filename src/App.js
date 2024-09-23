@@ -8,8 +8,12 @@ import MapPage from './components/MapPage';
 import TimerPage from './components/TimerPage';
 import Round from './components/Round';
 import LeaderboardPage from './components/LeaderboardPage';
+import { TimerProvider } from './components/TimerContext';
+import { AvatarProvider } from './components/AvatarContext';
 function App() {
   return (
+    <TimerProvider>
+    <AvatarProvider>
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -22,6 +26,8 @@ function App() {
         <Route path="/leaderboard" element={<LeaderboardPage/>}/>
       </Routes>
     </Router>
+    </AvatarProvider>
+    </TimerProvider>
   );
 }
 

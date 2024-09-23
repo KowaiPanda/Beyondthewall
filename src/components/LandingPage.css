@@ -3,26 +3,39 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-image: url('/public/landing.png');
+    background-image: url('/public/landing2.png');
     background-size: cover;
     background-position: center;
     text-align: center;
     padding: 20px;
+    font-family:'Cinzel',serif ;
+    font-weight:bold;
   }
-  
-  .description h1 {
-    font-size: 32px;
-    color: #fff;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  .quest{
+    margin-bottom: 5px;
+    font-size: 30px;
   }
-  
+  .beyond{
+    margin-bottom: 5px;
+    font-size: 35px;
+    margin-top: 5px;
+  }
+  .the{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .wall{
+    margin-top: 5px;
+    font-size:30px ;
+  }
   .description p {
     font-size: 18px;
     color: #ddd;
     margin: 10px 0;
-    margin-top: 60%;
+    margin-top: 40%;
     font-family:'Cinzel',serif ;
     font-weight:bold;
   }
