@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useLocation } from 'react-router-dom';
 import { useTimer } from './TimerContext'; // Import the useTimer hook
 import './Round.css';
 import emblem from './emblem.jpg'; // Image path based on your project structure
@@ -7,13 +7,21 @@ import emblem from './emblem.jpg'; // Image path based on your project structure
 const Round = () => {
   const [clickCount, setClickCount] = useState(0);
   const location = useLocation();
-  const navigate = useNavigate(); // Define navigate here
   const { round1Time, setRound1Time } = useTimer(); // Use global round1Time
   const carriedTime = location.state?.carriedTime || 2 * 60 * 60; // Default to 2 hours if undefined
   const [inputValue, setInputValue] = useState('');
   const [showInvisibleInput, setShowInvisibleInput] = useState(false);
   const [showWarning, setShowWarning] = useState(false);
   const [eventTime, setEventTime] = useState(carriedTime);
+
+  // Start the 2-minute timer when the Round page is loaded
+  useEffect(() => {
+    const round1IntervalId = setInterval(() => {
+      setRound1Time((prevRound1Time) => (prevRound1Time > 0 ? prevRound1Time - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(round1IntervalId);
+  }, [setRound1Time]);
 
   useEffect(() => {
     if (round1Time === 20) {
@@ -52,12 +60,6 @@ const Round = () => {
 
   return (
     <div className="round-1-page">
-      {/* Buttons to navigate to Map and Leaderboard */}
-      <div className="top-buttons">
-        <button onClick={() => navigate('/map')} className="top-button1"></button>
-        <button onClick={() => navigate('/leaderboard')} className="top-button2"></button>
-      </div>
-
       <div className="carried-timer">
         Main Event Timer: {formatCarriedTime(eventTime)}
       </div>

@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TimerPage.css';
-import { useTimer } from './TimerContext'; 
- // Import the useTimer hook from TimerContext
+import { useTimer } from './TimerContext'; // Import the useTimer hook
 
 function CountdownTimer() {
   const navigate = useNavigate();
-  const { time } = useTimer(); // Access global timer state from the context
+  const { time, setTime } = useTimer(); // Access global timer state from the context
+
+  // Start the 2-hour timer when the page is loaded
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [setTime]);
 
   const formatTime = (seconds) => {
     const hours = Math.floor(seconds / 3600);
