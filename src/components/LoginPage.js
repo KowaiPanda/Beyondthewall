@@ -29,19 +29,13 @@ const LoginPage = () => {
       mode: 'no-cors',
     });
 
-    let data;
-    try {
-      data = await response.text();
-    } catch (error) {
-      console.error('Failed to parse response JSON:', error);
-      return;
-    }
     if (!response.ok) {
       // remove later
-      console.log(data);
+      console.log(response);
       return;
     }
 
+    const data = await response.json();
     const token = data.token;
     localStorage.setItem('token', token);
     console.log('authentication successful - token:', token);
