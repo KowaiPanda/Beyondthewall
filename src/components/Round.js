@@ -10,7 +10,7 @@ const Round = () => {
   const { round1Time, setRound1Time } = useTimer(); // Use global round1Time
   const carriedTime = location.state?.carriedTime || 2 * 60 * 60; // Default to 2 hours if undefined
   const [inputValue, setInputValue] = useState('');
-  const [showInvisibleInput, setShowInvisibleInput] = useState(false);
+  const showInvisibleInput = useState(false);
   const [showWarning, setShowWarning] = useState(false);
   const [eventTime, setEventTime] = useState(carriedTime);
 
