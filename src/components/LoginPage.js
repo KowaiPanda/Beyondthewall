@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAvatar } from './AvatarContext';
 import './LoginPage.css';
-import { validateLogin } from '../back-end/LoginValidation';
+import { validateLogin } from '../back-end/LoginValidation.js';
 const handleLogin = () => {
   const username = document.querySelector('.username-input').value;
   const password = document.querySelector('.password-input').value;
