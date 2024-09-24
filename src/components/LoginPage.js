@@ -18,6 +18,8 @@ const LoginPage = () => {
   const [password, setPassword] = React.useState('');
 
   const handleLogin = async () => {
+    e.preventDefault();
+
     const response = await fetch('https://treasurehunt-backend-nine.vercel.app/api/login', {
       method: 'POST',
       headers: {
@@ -27,7 +29,13 @@ const LoginPage = () => {
       mode: 'no-cors',
     });
 
-    const data = await response.json();
+    let data;
+    try {
+      data = await response.json();
+    } catch (error) {
+      console.error('Failed to parse response JSON:', error);
+      return;
+    }
     if (!response.ok) {
       // remove later
       console.log(data);
