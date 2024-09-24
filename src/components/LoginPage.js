@@ -28,7 +28,6 @@ const LoginPage = () => {
       body: JSON.stringify({ username, password }),
     });
 
-    console.log(response.body);
     const data = await response.json();
     
     if (!response.ok) {
@@ -40,7 +39,7 @@ const LoginPage = () => {
     
     const token = data.token;
     localStorage.setItem('token', token);
-    console.log('authentication successful - token:', token);
+    navigate('/timer');
   }
   
   return (
