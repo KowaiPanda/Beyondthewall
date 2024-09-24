@@ -29,6 +29,7 @@ const LoginPage = () => {
       mode: 'no-cors',
     });
 
+    console.log(response.body);
     const data = await response.json();
     
     if (!response.ok) {
