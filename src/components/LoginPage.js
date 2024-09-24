@@ -1,5 +1,4 @@
-// LoginPage.js
-import React from 'react';
+import React, { useState } from 'react';  // Make sure useState is imported
 import { useNavigate } from 'react-router-dom';
 import { useAvatar } from './AvatarContext';
 import './LoginPage.css';
@@ -7,6 +6,13 @@ import './LoginPage.css';
 const LoginPage = () => {
   const navigate = useNavigate();
   const { selectedAvatar } = useAvatar();
+    // Define state for password visibility
+  const [showPassword, setShowPassword] = useState(false);
+
+    // Define the toggle function inside the component
+  const toggleShowPassword = () => {
+      setShowPassword(prevShowPassword => !prevShowPassword);
+    };
 
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -47,8 +53,19 @@ const LoginPage = () => {
           </div>
         )}
         <h1>Enter the Realm</h1>
-        <input type="text" placeholder="Username" className="username-input" value={username} onChange={e => setUsername(e.target.value)} />
-        <input type="password" placeholder="Password" className="password-input" value={password} onChange={e => setPassword(e.target.password)} />
+        <input type="text" placeholder="Username" className="username-input" value = {username} onChange={e => setUsername(e.target.value)}/>
+        <div className="password-container">
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            className="password-input"
+            value = {password}
+            onChange={e => setPassword(e.target.value)}
+          />
+          <button onClick={toggleShowPassword} className="show-password-button">
+            {showPassword ? "Hide" : "Show Password"}
+          </button>
+        </div>
         <div className="buttons">
           <button onClick={() => navigate('/select-avatar')} className="avatar-button">Select Avatar</button>
           <button className="login-button" onClick={handleLogin}>Begin Your Quest</button>
