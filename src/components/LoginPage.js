@@ -3,21 +3,37 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAvatar } from './AvatarContext';
 import './LoginPage.css';
-import { validateLogin } from '../../back-end/LoginValidation';
-const handleLogin = () => {
-  const username = document.querySelector('.username-input').value;
-  const password = document.querySelector('.password-input').value;
-  
-  if (validateLogin(username, password)) {
-    navigate('/timer');
-  } else {
-    alert('Invalid username or password');
-  }
-};
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const { selectedAvatar } = useAvatar();
+
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [error, setError] = React.useState(null);
+
+  const handleLogin = async () => {
+    const response = await fetch('https://treasurehunt-backend-nine.vercel.app/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+      mode: 'cors',
+    });
+
+    const data = await response.json();
+    if (!response.ok) {
+      setError(data.messasge);
+      // remove later
+      console.log(response);
+      return;
+    }
+
+    const token = data.token;
+    localStorage.setItem('token', token);
+    console.log('authentication successful - token:', token);
+  }
   
   return (
     <div className="login-page">
@@ -33,11 +49,11 @@ const LoginPage = () => {
           </div>
         )}
         <h1>Enter the Realm</h1>
-        <input type="text" placeholder="Username" className="username-input" />
-        <input type="password" placeholder="Password" className="password-input" />
+        <input type="text" placeholder="Username" className="username-input" value={username} onChange={e => setUsername(e.target.value)} />
+        <input type="password" placeholder="Password" className="password-input" value={password} onChange={e => setPassword(e.target.password)} />
         <div className="buttons">
           <button onClick={() => navigate('/select-avatar')} className="avatar-button">Select Avatar</button>
-          <button onClick={handleLogin} className="login-button">Begin Your Quest</button>
+          <button className="login-button" onClick={handleLogin}>Begin Your Quest</button>
         </div>
       </div>
     </div>
