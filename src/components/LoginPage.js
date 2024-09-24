@@ -26,7 +26,6 @@ const LoginPage = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ username, password }),
-      mode: 'no-cors',
     });
 
     console.log(response.body);
@@ -34,7 +33,7 @@ const LoginPage = () => {
     
     if (!response.ok) {
       // remove later
-      console.log(response);
+      console.log(data);
       return;
     }
 
