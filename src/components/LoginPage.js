@@ -10,7 +10,6 @@ const LoginPage = () => {
 
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
-  const [_, setError] = React.useState(null);
 
   const handleLogin = async () => {
     const response = await fetch('https://treasurehunt-backend-nine.vercel.app/api/login', {
@@ -22,13 +21,12 @@ const LoginPage = () => {
       mode: 'cors',
     });
 
-    const data = await response.json();
     if (!response.ok) {
-      setError(data.messasge);
       // remove later
       console.log(response);
       return;
     }
+    const data = await response.json();
 
     const token = data.token;
     localStorage.setItem('token', token);
