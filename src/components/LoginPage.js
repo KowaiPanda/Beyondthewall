@@ -29,13 +29,15 @@ const LoginPage = () => {
       mode: 'no-cors',
     });
 
+    const data = await response.json();
+    
     if (!response.ok) {
       // remove later
       console.log(response);
       return;
     }
 
-    const data = await response.json();
+    
     const token = data.token;
     localStorage.setItem('token', token);
     console.log('authentication successful - token:', token);
