@@ -17,7 +17,7 @@ const LoginPage = () => {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
     const response = await fetch('https://treasurehunt-backend-nine.vercel.app/api/login', {
