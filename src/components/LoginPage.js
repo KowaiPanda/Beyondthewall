@@ -31,7 +31,7 @@ const LoginPage = () => {
 
     let data;
     try {
-      data = await response.json();
+      data = await response.text();
     } catch (error) {
       console.error('Failed to parse response JSON:', error);
       return;
