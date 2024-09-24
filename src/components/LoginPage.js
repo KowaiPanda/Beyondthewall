@@ -30,16 +30,14 @@ const LoginPage = () => {
         )}
         <h1>Enter the Realm</h1>
         <input type="text" placeholder="Username" className="username-input" />
-        <div className="password-container">
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
             className="password-input"
           />
-          <button onClick={toggleShowPassword} className="show-password-button">
+          <button onClick={toggleShowPassword} className="show-password-button" >
             {showPassword ? "Hide" : "Show Password"}
           </button>
-        </div>
         <div className="buttons">
           <button onClick={() => navigate('/select-avatar')} className="avatar-button">Select Avatar</button>
           <button onClick={() => navigate('/timer')} className="login-button">Begin Your Quest</button>
