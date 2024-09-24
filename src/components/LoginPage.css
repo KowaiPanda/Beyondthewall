@@ -68,7 +68,7 @@ body {
   color: rgba(255, 255, 255, 0.5); /* Lighter color for the placeholder text */
 }
 
-.avatar-button, .login-button, .show-password-button{
+.avatar-button, .login-button{
   width: 100%;
   max-width: 200px;
   padding: 12px; /* Adjust padding */
@@ -147,4 +147,15 @@ body {
   border-radius: 50%;
   border: 2px solid #fff;  /* Optional: Add a border around the avatar */
   margin-bottom: 50px;
+}
+.show-password-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.show-password-checkbox input {
+  margin-right: 10px;
 }

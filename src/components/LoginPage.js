@@ -35,9 +35,15 @@ const LoginPage = () => {
             placeholder="Password"
             className="password-input"
           />
-          <button onClick={toggleShowPassword} className="show-password-button" >
-            {showPassword ? "Hide" : "Show Password"}
-          </button>
+          <div className="show-password-checkbox">
+          <input
+            type="checkbox"
+            id="showPassword"
+            checked={showPassword}
+            onChange={toggleShowPassword}
+          />
+          <label htmlFor="showPassword">Show Password</label>
+        </div>
         <div className="buttons">
           <button onClick={() => navigate('/select-avatar')} className="avatar-button">Select Avatar</button>
           <button onClick={() => navigate('/timer')} className="login-button">Begin Your Quest</button>
