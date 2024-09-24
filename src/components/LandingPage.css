@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-image: url('/public/landing2.png');
+    background-image: url('landingBackground.avif');
     background-size: cover;
     background-position: center;
     text-align: center;
