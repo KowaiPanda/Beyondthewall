@@ -15,29 +15,30 @@
   }
   .quest{
     margin-bottom: 5px;
-    font-size: 30px;
+    font-size: 35px;
   }
   .beyond{
     margin-bottom: 5px;
-    font-size: 35px;
+    font-size: 40px;
     margin-top: 5px;
   }
   .the{
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 5px;
     margin-bottom: 5px;
   }
   .wall{
     margin-top: 5px;
-    font-size:30px ;
+    font-size: 35px;
   }
   .description p {
-    font-size: 18px;
-    color: #ddd;
+    font-size: 19px;
+    color: #f1e3e3;
     margin: 10px 0;
-    margin-top: 40%;
+    margin-top: 70%;
     font-family:'Cinzel',serif ;
     font-weight:bold;
+    text-shadow: 2px 2px #2b2703;
   }
   
  
