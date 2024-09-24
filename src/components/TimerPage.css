@@ -7,7 +7,7 @@
     align-items:  center ;
     background-color: #111; 
     color: #fff;
-    background: url("/public/maintimer.jpg");
+    background: url("/public/swordbk.jpg");
 
   }
   
@@ -69,10 +69,21 @@
 }
 h1{
     font-family:'Cinzel',serif ;
-    font-size: x-large;
+    font-size:20px;
 }
 .Font{
-    background-image:linear-gradient(to right,black ,white);
+    background-image:linear-gradient(to right,rgb(43, 102, 212) ,rgb(237, 230, 37));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 } 
+.game{
+  width: 100%;
+  max-width: 200px;
+  padding: 12px; /* Adjust padding */
+  margin: 10px 0;
+  font-size: 18px; 
+  font-family: 'Cinzel', serif; /* Apply font family to buttons */
+  color: rgba(243, 234, 234, 0.922); /* Button text color */
+  background-color: #C4A535;
+  border-radius: 8px;
+}
