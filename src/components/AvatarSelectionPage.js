@@ -12,7 +12,10 @@ const AvatarSelectionPage = () => {
     { name: 'Jon Snow', img: 'JonSnow.png',smallImg:'JonSnowTOP.png' },
     { name: 'Targaryen', img: 'DaenerysTargaryen.png',smallImg:'DaenerysTargaryenTOP.png' },
     { name: 'Alvar Spyre', img: 'alvarspyre.png',smallImg:'alvarspyreTop.png' },
-    { name: 'Brynden Rivers', img: 'BryndenRivers.png',smallImg:'BryndenRiversTop.png' }
+    { name: 'Brynden Rivers', img: 'BryndenRivers.png',smallImg:'BryndenRiversTop.png' },
+    { name: 'Jaime Lannister', img: 'Jaime.jpg',smallImg:'jaimeTOP.jpg' },
+    { name: 'Wilding Tormund', img: 'tormund.jpg',smallImg:'tormundTOP.jpg' }
+
   ];
 
   const selectAvatar = (avatar) => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';  // Make sure useState is imported
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAvatar } from './AvatarContext';
 import './LoginPage.css';
@@ -15,14 +15,25 @@ const LoginPage = () => {
     setShowPassword(prevShowPassword => !prevShowPassword);
   };
 
+  // Navigate back function
+  const handleBackClick = (e) => {
+    e.preventDefault();  // Prevent default behavior of the anchor tag
+    navigate(-1);  // Navigate to the previous page
+  };
+
   return (
     <div className="login-page">
       <video autoPlay loop muted className="background-video">
         <source src={`${process.env.PUBLIC_URL}/Login_Vid.mp4`} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
+      {/* Back Button as Image */}
+      <a href="#" className="back-link" onClick={handleBackClick}>
+        <img src={`${process.env.PUBLIC_URL}/arrow-back-vector-icon-direction-260nw-1638337234-removebg-preview.png`} alt="Back" className="back-image" />
+      </a>
+
       <div className="container">
-        {/* Display the selected avatar at the top center */}
         {selectedAvatar && (
           <div className="selected-avatar-top">
             <img src={selectedAvatar.smallImg} alt={selectedAvatar.name} className="avatar-small-top" />
