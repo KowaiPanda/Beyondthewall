@@ -14,7 +14,6 @@ const LoginPage = () => {
       setShowPassword(prevShowPassword => !prevShowPassword);
     };
 
-<<<<<<< HEAD
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
@@ -43,14 +42,12 @@ const LoginPage = () => {
     navigate('/timer');
   }
   
-=======
   // Navigate back function
   const handleBackClick = (e) => {
     e.preventDefault();  // Prevent default behavior of the anchor tag
     navigate(-1);  // Navigate to the previous page
   };
 
->>>>>>> d0d19acc50f91e37f9fcc2e1f8dc80441f700d70
   return (
     <div className="login-page">
       <video autoPlay loop muted className="background-video">
@@ -70,12 +67,8 @@ const LoginPage = () => {
           </div>
         )}
         <h1>Enter the Realm</h1>
-<<<<<<< HEAD
-        <input type="text" placeholder="Username" className="username-input" value = {username} onChange={e => setUsername(e.target.value)}/>
-        <div className="password-container">
-=======
-        <input type="text" placeholder="Username" className="username-input" />
->>>>>>> d0d19acc50f91e37f9fcc2e1f8dc80441f700d70
+        <input type="text" placeholder="Username" className="username-input" value={username}
+          onChange={e => setUsername(e.target.value)} />
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"

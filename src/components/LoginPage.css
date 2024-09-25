@@ -69,28 +69,17 @@ body {
   color: rgba(255, 255, 255, 0.5); /* Lighter color for the placeholder text */
 }
 
-<<<<<<< HEAD
-.avatar-button, .login-button{
-  width: 100%;
-  max-width: 200px;
-=======
 /* Ensure buttons are of the same size */
 .avatar-button, .login-button, .show-password-button {
   width: 100%;  /* Full width */
->>>>>>> origin/main
   padding: 12px; /* Adjust padding */
   margin: 10px 0;
   font-size: 18px; /* Increase font size */
   /* border: none;
   border-radius: 5px; */
   font-family: 'Cinzel', serif; /* Apply font family to buttons */
-<<<<<<< HEAD
-  color: rgb(255, 251, 251); /* Button text color */
-  background-color: #C4A535;
-=======
   color: white; /* Button text color */
   cursor: pointer; /* Pointer cursor on hover */
->>>>>>> origin/main
 }
 
 .avatar-button {
@@ -178,19 +167,6 @@ body {
   border: 2px solid #fff;  /* Optional: Add a border around the avatar */
   margin-bottom: 50px;
 }
-<<<<<<< HEAD
-.show-password-checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.show-password-checkbox input {
-  margin-right: 10px;
-}
-=======
 
 .show-password-button {
   background-color: #D4AF37; /* Gold base color */
@@ -206,4 +182,3 @@ body {
   text-align: center; /* Center text inside the button */
 }
 
->>>>>>> origin/main

@@ -11,11 +11,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
-<<<<<<< HEAD
     "react-scripts": "^5.0.1",
-=======
-    "react-scripts": "^3.4.4",
->>>>>>> d0d19acc50f91e37f9fcc2e1f8dc80441f700d70
     "web-vitals": "^2.1.4"
   },
   "scripts": {
