@@ -1,4 +1,3 @@
-
 /* LoginPage.css */
 body {
   font-family: 'Cinzel', serif; /* Set global font family */
@@ -35,6 +34,8 @@ body {
   max-width: 350px;
   padding: 20px;
   background-color: transparent;
+  width: 80%;
+  max-width: 300px;
 }
 
 .container h1 {
@@ -43,13 +44,14 @@ body {
   text-align: center;
   color: #D4AF37;
   margin-top: 80px; /* Gold color for Game of Thrones theme */
+  font-family: 'Cinzel',serif;
 }
 
+/* Set consistent styles for input fields */
 .username-input, .password-input {
-  width: 100%;
-  max-width: 250px;
+  width: 100%;  /* Full width */
   padding: 12px; /* Adjust padding */
-  margin: 10px 0;
+  margin: 10px 0; 
   font-size: 18px; /* Increase font size */
   border: none;
   border-radius: 5px;
@@ -67,21 +69,32 @@ body {
   color: rgba(255, 255, 255, 0.5); /* Lighter color for the placeholder text */
 }
 
-.avatar-button, .login-button {
+<<<<<<< HEAD
+.avatar-button, .login-button{
   width: 100%;
   max-width: 200px;
+=======
+/* Ensure buttons are of the same size */
+.avatar-button, .login-button, .show-password-button {
+  width: 100%;  /* Full width */
+>>>>>>> origin/main
   padding: 12px; /* Adjust padding */
   margin: 10px 0;
   font-size: 18px; /* Increase font size */
-  border: none;
-  border-radius: 5px;
+  /* border: none;
+  border-radius: 5px; */
   font-family: 'Cinzel', serif; /* Apply font family to buttons */
+<<<<<<< HEAD
+  color: rgb(255, 251, 251); /* Button text color */
+  background-color: #C4A535;
+=======
   color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+>>>>>>> origin/main
 }
 
 .avatar-button {
   background-color: #333;
-  cursor: pointer;
   transition: background-color 0.3s;
 }
 
@@ -96,7 +109,6 @@ body {
               inset 0 -1px 3px rgba(0, 0, 0, 0.3), /* Depth */
               0 3px 6px rgba(0, 0, 0, 0.5), /* Outer shadow for a worn look */
               1px 1px 4px rgba(0, 0, 0, 0.6); /* Rough shadow edges */
-  cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
@@ -116,6 +128,24 @@ body {
   gap: 10px;
 }
 
+.back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-image {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.back-image:hover {
+  transform: scale(1.1); /* Slightly enlarges the image on hover */
+}
+
+
 @media (max-width: 600px) {
   h1 {
     font-size: 20px;
@@ -130,6 +160,7 @@ body {
     gap: 8px;
   }
 }
+
 .selected-avatar-top {
   position: absolute;
   top: 10px;  /* Adjust to control the vertical distance from the top */
@@ -139,6 +170,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .avatar-small-top {
   width: 100px;  /* Size of the small avatar */
   height: 100px;
@@ -146,8 +178,21 @@ body {
   border: 2px solid #fff;  /* Optional: Add a border around the avatar */
   margin-bottom: 50px;
 }
-.show-password-button{
-  border: 1px solid #555; /* Dark border */
+<<<<<<< HEAD
+.show-password-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.show-password-checkbox input {
+  margin-right: 10px;
+}
+=======
+
+.show-password-button {
   background-color: #D4AF37; /* Gold base color */
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Highlight */
               inset 0 -1px 3px rgba(0, 0, 0, 0.3), /* Depth */
@@ -155,9 +200,10 @@ body {
               1px 1px 4px rgba(0, 0, 0, 0.6); /* Rough shadow edges */
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  gap: 10px;
+  width: 70%; /* Reduce width */
+  margin: 10px auto; /* Center horizontally */
+  display: block; /* Ensure it's treated as a block-level element for centering */
+  text-align: center; /* Center text inside the button */
 }
+
+>>>>>>> origin/main

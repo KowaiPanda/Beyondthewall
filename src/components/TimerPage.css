@@ -1,15 +1,23 @@
 .timer-page {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:  center ;
-    background-color: #111; 
-    color: #fff;
-    background: url("/public/time.jpg");
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  background-image: url("/public/swordbk.jpg");
+  background-size: cover; /* This makes the background image responsive */
+  background-position: center; /* This centers the background image */
+  background-repeat: no-repeat; /* Ensures the image does not repeat */
+}
 
+@media (max-width: 768px) {
+  .timer-page {
+      background-size: contain; /* Adjust the size on smaller screens */
   }
+}
   
   .top-buttons {
     position: absolute;
@@ -50,7 +58,7 @@
     color: #ffe600; 
   }
 .top-button1{
-   background: url("/public/treasure.png");
+   background: url("/public/icons8-treasure-map-64.png");
     background-size: cover;
     background-position:center ;
     width: 50px;
@@ -69,10 +77,28 @@
 }
 h1{
     font-family:'Cinzel',serif ;
-    font-size: x-large;
+    font-size:20px;
 }
 .Font{
-    background-image:linear-gradient(to right,black ,white);
+    background-image:linear-gradient(to right,yellow ,Gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px black;
 } 
+.Font1{
+  background-image:linear-gradient(to right,yellow ,Gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0.3px 0.3px black;
+}
+.game{
+  width: 100%;
+  max-width: 200px;
+  padding: 12px; /* Adjust padding */
+  margin: 10px 0;
+  font-size: 18px; 
+  font-family: 'Cinzel', serif; /* Apply font family to buttons */
+  color: rgba(243, 234, 234, 0.922); /* Button text color */
+  background-color: #C4A535;
+  border-radius: 8px;
+}
